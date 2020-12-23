@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-sm-12">
         <nav-header></nav-header>
+        <card-Front></card-Front>
       </div>
     </div>
   </div>
@@ -10,10 +11,12 @@
 
 <script>
 import Header from './components/Header.vue'
+import CardFront from './components/card/CardFront.vue'
 
 export default {
   components: {
-    navHeader: Header
+    navHeader: Header,
+    cardFront: CardFront
   }
 }
 </script>

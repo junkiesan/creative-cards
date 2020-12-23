@@ -17,5 +17,7 @@ export default {
 </script>
 
 <style>
-
+h1 {
+  margin-top: 10px;
+}
 </style>
