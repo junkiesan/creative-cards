@@ -26,4 +26,8 @@ export default {
     font-family: Verdana, Geneva, sans-serif;
     color: #333;
   }
+
+  a {
+    cursor: pointer;
+  }
 </style>
