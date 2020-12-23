@@ -22,7 +22,8 @@ export default {
 </script>
 
 <style>
-h1 {
-  margin-top: 10px;
-}
+  body {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #333;
+  }
 </style>
