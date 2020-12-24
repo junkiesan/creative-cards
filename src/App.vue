@@ -12,6 +12,9 @@
 <script>
 import Header from './components/Header.vue'
 import CardFront from './components/card/CardFront.vue'
+import CardBack from './components/card/CardBack.vue'
+import CardInsideLeft from './components/card/CardInsideLeft.vue'
+import CardInsideRight from './components/card/CardInsideRight.vue'
 
 export default {
   data: function () {
@@ -21,7 +24,10 @@ export default {
   },
   components: {
     navHeader: Header,
-    cardFront: CardFront
+    cardFront: CardFront,
+    cardBack: CardBack,
+    cardInsideLeft: CardInsideLeft,
+    cardInsideRight: CardInsideRight
   }
 }
 </script>
