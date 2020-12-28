@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  p {
+  font-family: 'Tangerine', cursive;
+  }
 </style>
