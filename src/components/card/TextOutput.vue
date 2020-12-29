@@ -1,7 +1,14 @@
 <template>
   <div @mouseover="showOptions = true" @mouseleave="showOptions = false">
     <form class="small" v-show="showOptions">
-      <p>test</p>
+      <label for="selectBox">Font size: </label>
+      <select class="custom-select" id="selectBox" v-model="setFontSize">
+        <option value="42">42px</option>
+        <option value="48">48px</option>
+        <option value="56">56px</option>
+        <option value="64">64px</option>
+
+      </select>
     </form>
     <p :style="styleObject"> {{ displayText }} </p>
   </div>
@@ -18,12 +25,14 @@ export default {
   },
   data: function() {
     return {
-      showOptions: false
+      showOptions: false,
+      setFontSize: ''
     }
   },
   computed: {
     styleObject: function () {
       return {
+        fontSize: this.setFontSize + 'px',
         height: this.containerHeight + 'px'
       }
     }
