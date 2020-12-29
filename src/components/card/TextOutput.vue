@@ -23,8 +23,21 @@
           <input type="radio" class="form-check-input" value="right" v-model="setTextAlign">Left
         </label>
       </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="bold" v-model="setBold">Bold
+        </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" value="italic" v-model="setItalic">Italic
+        </label>
+      </div>
     </form>
-    <p :style="styleObject"> {{ displayText }} </p>
+    <p :style="styleObject" 
+       :class="{bold: setBold, italic: setItalic}"> 
+       {{ displayText }} 
+    </p>
   </div>
 </template>
 
@@ -41,7 +54,9 @@ export default {
     return {
       showOptions: false,
       setFontSize: '',
-      setTextAlign: ''
+      setTextAlign: '',
+      setBold: false,
+      setItalic: false
     }
   },
   computed: {
@@ -58,15 +73,35 @@ export default {
 
 <style scoped>
   p {
-  align-items: center;
-  font-family: 'Tangerine', cursive;
-  font-size: 42px;
-  line-height: 120px;
-  text-shadow: 2px 2px 2px #aaa;
-  color: #4d4d4d;
-  margin: 5px 0;
-  border: 1px dotted grey;
-  white-space: pre-line;
-  overflow: hidden;
+    align-items: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 42px;
+    line-height: 42px;
+    text-shadow: 2px 2px 2px #aaa;
+    color: #4d4d4d;
+    margin: 5px 0;
+    border: 1px dotted grey;
+    white-space: pre-line;
+    overflow: hidden;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+ 
+  .italic {
+    font-style: italic;
+  }
+
+  form {
+    position: absolute;
+    border: 1px dotted grey;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+
+  select {
+    height: 40%;
   }
 </style>
