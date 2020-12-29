@@ -29,6 +29,7 @@ export default {
       storageRef.getDownloadURL().then(function(url) {
         var img = document.getElementById('outputImage')
         img.src = url
+        setDraggable();
       })
     }
   },
@@ -40,6 +41,11 @@ export default {
     }
   }
 }
+
+function setDraggable() {
+  $('#outputImage').draggable();
+
+}
 </script>
 
 <style> 
@@ -48,8 +54,13 @@ export default {
     overflow: hidden;
     margin: 5px 0;
   }
+
   button {
     position: absolute;
     z-index: 1;
+  }
+
+  img {
+    width: 130%;
   }
 </style>
