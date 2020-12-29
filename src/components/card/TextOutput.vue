@@ -58,9 +58,10 @@ export default {
 
 <style scoped>
   p {
+  align-items: center;
   font-family: 'Tangerine', cursive;
   font-size: 42px;
-  line-height: 42px;
+  line-height: 120px;
   text-shadow: 2px 2px 2px #aaa;
   color: #4d4d4d;
   margin: 5px 0;
