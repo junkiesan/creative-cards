@@ -104,4 +104,8 @@ export default {
   select {
     height: 40%;
   }
+
+  .custom-select {
+    width: 100px;
+  }
 </style>
