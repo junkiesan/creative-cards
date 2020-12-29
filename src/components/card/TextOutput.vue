@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div @mouseover="showOptions = true" @mouseleave="showOptions = false">
+    <form class="small" v-show="showOptions">
+      <p>test</p>
+    </form>
     <p :style="styleObject"> {{ displayText }} </p>
   </div>
 </template>
@@ -11,6 +14,11 @@ export default {
     containerHeight: {
       type: Number,
       default: 200
+    }
+  },
+  data: function() {
+    return {
+      showOptions: false
     }
   },
   computed: {
