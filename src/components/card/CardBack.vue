@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-6 card edit-area">
       <cc-image-upload @displayImageChanged="imageName = $event"></cc-image-upload> <hr>
-      <ccSectionCompleted></ccSectionCompleted>
+      <cc-section-completed></cc-section-completed>
     </div>
     <div class="col-sm-6 card card-display">
       <cc-image-output :displayImage="imageName" :containerHeight="400" :clearImageProp="clearImage"></cc-image-output>

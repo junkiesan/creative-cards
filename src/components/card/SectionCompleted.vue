@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { eventBus } from '../../main.js'
+import { EventBus } from '../../main.js'
 export default {
   data: function () {
     return {
