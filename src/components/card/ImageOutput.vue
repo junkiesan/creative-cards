@@ -1,6 +1,8 @@
 <template>
   <div class="img-container" :style="styleObject" @mouseover="showOptions = true" @mouseleave="showOptions = false">
-    <button type="button" class="btn btn-outline-danger btn-sm" v-show="showOptions" @click="clearImageProp">Remove image</button>
+    <transition name="fade">
+      <button type="button" class="btn btn-outline-danger btn-sm" v-show="showOptions" @click="clearImageProp">Remove image</button>
+    </transition>
     <img id="outputImage">{{ displayImage}}
   </div>
 </template>
