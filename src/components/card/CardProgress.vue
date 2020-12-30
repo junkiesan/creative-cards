@@ -26,4 +26,7 @@ export default {
 </script>
 
 <style>
+ progress { 
+   width: 100%;
+ }
 </style>
