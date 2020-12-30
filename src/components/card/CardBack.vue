@@ -27,9 +27,7 @@ export default {
     ccImageUpload: ImageUpload,
     ccImageOutput: ImageOutput,
     ccSectionCompleted: SectionCompleted
-
   }
-  
 }
 </script>
 

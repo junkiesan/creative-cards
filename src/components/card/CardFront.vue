@@ -22,8 +22,10 @@ import TextOutput from './TextOutput.vue'
 import ImageUpload from './ImageUpload.vue'
 import ImageOutput from './ImageOutput.vue'
 import SectionCompleted from './SectionCompleted.vue'
+import { clearImageMixin } from '../../clearImageMixin.js'
 
 export default {
+  mixins: [clearImageMixin],
   data: function () {
     return {
       textBoxValue1: '',
@@ -32,20 +34,12 @@ export default {
       imageName: ''
     }
   },
-  methods: {
-    clearImage: function () {
-      if(this.imageName != '') {
-        this.imageName = 'background.png'
-      }
-    }
-  },
   components: {
     ccTextInput: TextInput,
     ccTextOutput: TextOutput,
     ccImageUpload: ImageUpload,
     ccImageOutput: ImageOutput,
     ccSectionCompleted: SectionCompleted
-
   }
 }
 </script>
