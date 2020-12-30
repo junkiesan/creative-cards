@@ -14,18 +14,13 @@
 import ImageUpload from './ImageUpload.vue'
 import ImageOutput from './ImageOutput.vue'
 import SectionCompleted from './SectionCompleted.vue'
+import { clearImageMixin } from '../../clearImageMixin.js'
 
 export default {
+  mixins: [clearImageMixin],
   data: function () {
     return {
       imageName: ''
-    }
-  },
-  methods: {
-    clearImage: function () {
-      if(this.imageName != '') {
-        this.imageName = 'background.png'
-      }
     }
   },
   components: {
