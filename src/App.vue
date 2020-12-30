@@ -3,9 +3,12 @@
     <div class="row">
       <div class="col-sm-12">
         <nav-header @pageWasChanged="currentPage = $event"></nav-header>
-        <keep-alive>
-          <component :is="currentPage"></component>
-        </keep-alive>
+        <transition name="fade" mode="out-in">
+          <keep-alive>
+            <component :is="currentPage"></component>
+          </keep-alive>
+        </transition>
+        
         <cc-footer>
           <p class="text-center" slot="app-name"> &copy; {{ appName }}</p>
           <nav>
