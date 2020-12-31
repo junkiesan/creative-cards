@@ -3,7 +3,17 @@
     <div class="row">
       <div class="col-sm-12">
         <nav-header @pageWasChanged="currentPage = $event"></nav-header>
-        <transition name="fade" mode="out-in">
+        <div id="instructions" class="text-center italic">
+          <div class="row">
+            <div class="col-sm-6">
+              <p><em>&larr; Make changes in the edit card area below:</em></p>
+            </div>
+            <div class="col-sm-6">
+              <p><em> And they will show on the card! &rarr;</em></p>
+            </div>
+          </div>
+        </div>
+        <transition name="fade" mode="out-in" @enter="enter">
           <keep-alive>
             <component :is="currentPage"></component>
           </keep-alive>
@@ -38,6 +48,12 @@ export default {
     return {
       currentPage: 'cardFront',
       appName: 'Creative Cards'
+    }
+  },
+  methods: {
+    enter: function (el, done) {
+      document.getElementById('instructions').style.display = 'none';
+      done()
     }
   },
   components: {
