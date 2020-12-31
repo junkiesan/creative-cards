@@ -13,7 +13,7 @@
             </div>
           </div>
         </div>
-        <transition name="fade" mode="out-in" @enter="enter">
+        <transition appear appear-active-class="scale-appear-active-class" name="fade" mode="out-in" @enter="enter">
           <keep-alive>
             <component :is="currentPage"></component>
           </keep-alive>
@@ -82,6 +82,10 @@ export default {
 
   .fade-enter-active {
     transition: opacity .5s;
+  }
+
+  .scale-appear-active-class {
+    transition: opacity 1s;
   }
   
   .fade-leave-active {
